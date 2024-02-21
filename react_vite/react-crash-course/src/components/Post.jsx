@@ -2,6 +2,9 @@
  *  vite(비트)에선 jsx만 가능
  */
 
+import classes from './Post.module.css';
+// import styles from './Post.module.css';
+
 const names = ['Maxmilian', 'Manuel'];
 /**
  * 함수의 첫 글자는 대문자 권장(recommended)
@@ -9,10 +12,10 @@ const names = ['Maxmilian', 'Manuel'];
 function Post(props) {
     
     return (
-        <div>
-            <p>{props.author}</p>
-            <p>{props.body}</p>
-        </div>
+        <li className={classes.post}>
+            <p className={classes.author}>{props.author}</p>
+            <p className={classes.text}>{props.body}</p>
+        </li>
     );        
 }
 
