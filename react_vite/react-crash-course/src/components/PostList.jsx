@@ -15,6 +15,7 @@ function PostList({isPosing, onStopPosing}) {
         'Content-Type': 'application/json'
       }
     });
+    // console.log("body"+JSON.stringify(postData));
     setPosts((existingPosts)=>[postData, ...existingPosts]);
   }
 
